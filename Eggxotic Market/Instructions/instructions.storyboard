@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Instructions View Controller-->
+        <scene sceneID="s0z-Yd-gtF">
+            <objects>
+                <viewController storyboardIdentifier="Instructions1" id="q7G-bN-RbQ" customClass="InstructionsViewController" customModule="Eggxotic_Market" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocF-Vd-SLS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Story &amp;  How To Play:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jt-zh-dTh">
+                                <rect key="frame" x="57" y="85" width="206" height="76.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thb-2r-XZ4">
+                                <rect key="frame" x="5" y="171.5" width="310" height="316.5"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4uO-Xp-J2a">
+                                <rect key="frame" x="97.5" y="498" width="125" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="BACK" backgroundImage="infoButton">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RPv-4V-fbi" kind="presentation" modalPresentationStyle="fullScreen" id="CUO-ho-dAC"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggMarketLogo" translatesAutoresizingMaskIntoConstraints="NO" id="CgP-NJ-ig4">
+                                <rect key="frame" x="5" y="0.0" width="310" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lTA-B3-OL7" firstAttribute="trailing" secondItem="Thb-2r-XZ4" secondAttribute="trailing" constant="5" id="BAq-uU-oq0"/>
+                            <constraint firstItem="Thb-2r-XZ4" firstAttribute="top" secondItem="0jt-zh-dTh" secondAttribute="bottom" constant="10" id="DJ6-3g-PWS"/>
+                            <constraint firstItem="0jt-zh-dTh" firstAttribute="top" secondItem="lTA-B3-OL7" secondAttribute="top" constant="85" id="IsE-z9-czb"/>
+                            <constraint firstItem="4uO-Xp-J2a" firstAttribute="top" secondItem="Thb-2r-XZ4" secondAttribute="bottom" constant="10" id="JDK-Kg-3tc"/>
+                            <constraint firstItem="lTA-B3-OL7" firstAttribute="bottom" secondItem="4uO-Xp-J2a" secondAttribute="bottom" constant="10" id="Uxp-2P-BBg"/>
+                            <constraint firstItem="CgP-NJ-ig4" firstAttribute="top" secondItem="lTA-B3-OL7" secondAttribute="top" id="Wpa-tV-juy"/>
+                            <constraint firstItem="Thb-2r-XZ4" firstAttribute="leading" secondItem="lTA-B3-OL7" secondAttribute="leading" constant="5" id="bF7-QA-Oto"/>
+                            <constraint firstItem="lTA-B3-OL7" firstAttribute="trailing" secondItem="CgP-NJ-ig4" secondAttribute="trailing" constant="5" id="bgj-u7-0Td"/>
+                            <constraint firstItem="0jt-zh-dTh" firstAttribute="centerX" secondItem="ocF-Vd-SLS" secondAttribute="centerX" id="dSs-ph-xNB"/>
+                            <constraint firstItem="4uO-Xp-J2a" firstAttribute="centerX" secondItem="ocF-Vd-SLS" secondAttribute="centerX" id="ekK-vj-13A"/>
+                            <constraint firstItem="CgP-NJ-ig4" firstAttribute="leading" secondItem="lTA-B3-OL7" secondAttribute="leading" constant="5" id="p0c-vE-Fbi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lTA-B3-OL7"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Thb-2r-XZ4" id="li0-cl-gMR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Qg-kB-Axs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73.125" y="83.450704225352112"/>
+        </scene>
+        <!--menu-->
+        <scene sceneID="rDE-A3-G57">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="menu" id="RPv-4V-fbi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cH4-NP-tSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eggMarketLogo" width="490" height="100"/>
+        <image name="infoButton" width="125" height="60"/>
+    </resources>
+</document>
